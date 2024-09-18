@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="container mx-auto">
+      <!-- balace starts -->
+      <div class="stats flex justify-between items-center">
+        <div><img src="./payoo.png" alt="" class="h-24" /></div>
+        <div class="stat">
+          <div class="stat-value">$<span id="balance-span">89400</span></div>
+          <div class="stat-desc">Available Balance</div>
+        </div>
+        <button class="btn btn-lg">Log Out</button>
+      </div>
+      <!-- balace ends -->
+      <div class="divider"></div>
+      <!-- money transfer section statrs -->
+      <section>
+        <!-- section title and description starts -->
+        <h1 class="font-extrabold text-2xl text-black mb-3">Welcome to Payoo!</h1>
+        <p>
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+        <!-- section title and description starts -->
+        <div class="divider"></div>
+        <!-- cards starts -->
+         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+            <button id="add-money" class="btn btn-lg">Add Money</button>
+            <button id="cash-out" class="btn btn-lg">Cashout</button>
+            <button id="transfer-money" class="btn btn-lg">Transfer Money</button>
+            <button id="get-bonus" class="btn btn-lg">Get Bonus</button>
+            <button id="pay-bill" class="btn btn-lg">Pay Bill</button>
+            <button id="transection" class="btn btn-lg">Transactions</button>
+         </div>
+        <!-- cards ends -->
+      </section>
+      <!-- money transfer section ends -->
+      <div class="divider"></div>
+      <!-- display add money section starts -->
+       <section id="add-money-container" class="hidden justify-center items-center pb-6">
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Bank Account Number</span>
+                </label>
+                <input id="acount-number" type="text" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Add</span>
+                </label>
+                <input id="amount-add" type="text" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="add-money-btn" class="btn btn-primary">Add Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- display add money section ends here -->
+
+       <!-- display cashout section starts -->
+       <section id="cash-out-container" class="hidden justify-center items-center pb-6">
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Agent Number</span>
+                </label>
+                <input id="acount-number-cash-out" type="text" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="amount-withdrawn" type="text" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="cash-out-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="cash-out-btn" class="btn btn-primary">Withdraw Money</button>
+              </div>
+            </form>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- display cashout section ends -->
+    </main>
+    <script src="./js/addMoney.js"></script>
+    <script src="./js/cashout.js"></script>
+    <script src="./js/feature.js"></script>
+  </body>
+</html>
