@@ -8,10 +8,10 @@ document.getElementById('add-money-btn').addEventListener('click',function(e){
 
    if (acNumber.length === 11 && Number(amountValue) >=0 && pinNumber.length === 4) {
          totalAmount += Number(amountValue);
-         document.getElementById('balance-span').innerText = totalAmount;
+         document.getElementById('balance-span').innerText = totalAmount.toFixed(3);
    }
     else {
-       alert('Please Provide valid Acount Number or Pin or Amount')
+       alert('Please Provide valid Account Number or Pin or Amount')
    }
 })
 

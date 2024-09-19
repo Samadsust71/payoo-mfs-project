@@ -7,11 +7,11 @@ document.getElementById('cash-out-btn').addEventListener('click',function(e){
     const pinNumber = document.getElementById('cash-out-pin-number').value
     let totalAmount = Number(totalBalance);
 
-   if (acNumber.length === 11 && Number(amountValue) >=0 && pinNumber.length === 4) {
+   if (acNumber.length === 11 && Number(amountValue) >=0 && pinNumber.length === 4 && Number(amountValue) <= totalAmount) {
          totalAmount -= Number(amountValue);
-         document.getElementById('balance-span').innerText = totalAmount;
+         document.getElementById('balance-span').innerText = totalAmount.toFixed(3);
    }
     else {
-       alert('Please Provide valid Acount Number or Pin or Amount')
+       alert('Please Provide valid Account Number or Pin or Amount')
    }
 })
