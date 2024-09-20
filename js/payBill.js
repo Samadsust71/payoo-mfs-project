@@ -1,10 +1,14 @@
 
-document.getElementById('cash-out-btn').addEventListener('click',function(e){
+document.getElementById('pay-bill').addEventListener('click',function(){
+    showSection('pay-bill-container');
+});
+
+document.getElementById('pay-bill-btn').addEventListener('click',function(e){
     e.preventDefault();
     const totalBalance = document.getElementById('balance-span').innerText;
-    const acNumber = document.getElementById('acount-number-cash-out').value;
-    const amountValue = getInputValue('amount-withdrawn');
-    const pinNumber = getInputValue('cash-out-pin-number');
+    const acNumber = document.getElementById('acount-number-pay-bill').value;
+    const amountValue = getInputValue('amount-pay-bill');
+    const pinNumber = getInputValue('pay-bill-pin-number');
     let totalAmount = Number(totalBalance);
 
    if (acNumber.length === 11 && amountValue >=0 && pinNumber === 1234 && Number(amountValue) <= totalAmount) {
@@ -14,9 +18,5 @@ document.getElementById('cash-out-btn').addEventListener('click',function(e){
     else {
        alert('Please Provide valid Account Number or Pin or Amount')
    }
-   transectionHistory('samad',acNumber,amountValue);
-})
-
-document.getElementById('cash-out').addEventListener('click',function(){
-    showSection('cash-out-container');
+   transectionHistory('Samad',acNumber,amountValue);
 })

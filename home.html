@@ -21,7 +21,7 @@
           <div class="stat-value">$<span id="balance-span">89400</span></div>
           <div class="stat-desc">Available Balance</div>
         </div>
-        <button class="btn btn-lg">Log Out</button>
+        <a href="index.html"><button class="btn btn-lg">Log Out</button></a>
       </div>
       <!-- balace ends -->
       <div class="divider"></div>
@@ -52,6 +52,7 @@
        <section id="add-money-container" class="hidden justify-center items-center pb-6">
         <!-- form div starts -->
         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+          <h1 class="text-2xl font-bold mt-4 ml-4">Add Money</h1>
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -84,6 +85,7 @@
        <section id="cash-out-container" class="hidden justify-center items-center pb-6">
         <!-- form div starts -->
         <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+          <h1 class="text-2xl font-bold mt-4 ml-4">Cash Out</h1>
             <form class="card-body">
               <div class="form-control">
                 <label class="label">
@@ -111,9 +113,117 @@
           <!-- form div ends -->
        </section>
        <!-- display cashout section ends -->
+
+       <!-- Section: transfer money Start -->      
+       <section id="transfer-money-container" class="hidden justify-center items-center pb-6">
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+          <h1 class="text-2xl font-bold mt-4 ml-4">Transfer Money</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">User Account Number</span>
+                </label>
+                <input id="acount-number-transfer-money" type="text" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount</span>
+                </label>
+                <input id="amount-transfer" type="text" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="transfer-money-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="transfer-money-btn" class="btn btn-primary">Send Now</button>
+              </div>
+            </form>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- Section: transfer money end -->
+
+       <!-- Section: get Bonus counpon start -->
+       <section id="get-bonus-container" class="hidden justify-center items-center pb-6">
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+          <h1 class="text-2xl font-bold mt-4 ml-4">Get Bonus</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Enter Bonus Coupon</span>
+                </label>
+                <input id="coupon-get-bonus" type="text" placeholder="Enter your coupon" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="get-bonus-coupon-btn" class="btn btn-primary">Get Bonus</button>
+              </div>
+            </form>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- Section: get Bonus counpon end -->
+
+       <!-- section; pay bill start -->
+       <section id="pay-bill-container" class="hidden justify-center items-center pb-6">
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+             <h1 class="text-2xl font-bold mt-4 ml-4">Pay Bill</h1>
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Biller Account Number</span>
+                </label>
+                <input id="acount-number-pay-bill" type="text" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Amount to Pay</span>
+                </label>
+                <input id="amount-pay-bill" type="text" placeholder="Enter amount to pay" class="input input-bordered" required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin Number</span>
+                </label>
+                <input id="pay-bill-pin-number" type="password" placeholder="Enter 4 digit pin number" class="input input-bordered" required />
+              </div>
+              <div class="form-control mt-6">
+                <button id="pay-bill-btn" class="btn btn-primary">Pay Now</button>
+              </div>
+            </form>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- section; pay bill end -->
+
+       <!-- transection history section start -->
+       <section id="transection-history-container" class="hidden justify-center items-center pb-6"> 
+        <!-- form div starts -->
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-xl">
+          <div class="flex justify-between items-center">
+            <h1 class="text-xl font-bold">Transactions history</h1>
+            <button onclick="clearAll()">Clear all</button>
+          </div>
+          <!-- parent div -->
+          <div id="transection-details-container">
+            
+          </div>
+          </div>
+          <!-- form div ends -->
+       </section>
+       <!-- transection history section end -->
     </main>
+    <script src="js/transectionHistory.js"></script>
+    <script src="js/payBill.js"></script>
+    <script src="js/transferMoney.js"></script>
     <script src="js/addMoney.js"></script>
     <script src="js/cashout.js"></script>
     <script src="js/feature.js"></script>
+    <script src="js/getBonus.js"></script>
   </body>
 </html>
